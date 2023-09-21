@@ -2,8 +2,9 @@
 
 Hello! We're pleased to hear you're interested in joining our engineering team!
 
-Upon review, your submission to this challenge will become the basis of a discussion on design decisions, code, and further extensions
+Upon review, your submission to this challenge will become the basis of a discussion on design decisions, code, and further extensions.
 
+If any of the instructions are unclear, please feel free to reach out to us for clarification!
 ## Challenge
 
 Your team has been tasked with building an API for a service ordering system; For the first iteration, we need a "Shopping cart" endpoint that calculates the cost of services requested based on different requested options.
@@ -33,9 +34,11 @@ The endpoint should return a JSON response that contains
 
 We've added a couple JSON files in this repository representing the cart items needing to be calculated, which you can use to test your system
 
+Your task is to write a an API that takes a JSON file as input, calculates the total cost of the cart items, and returns the JSON response as described above. We expect you use automated tests to validate your solution.
+
 ## Guidelines
 
--   This is meant to be an assignment that you spend approximately 2 to 3 hours of dedicated, focused work. Do not feel like you need to overengineer the solution with dozens of hours. Be biased toward quality over quantity.
+-   This is meant to be an assignment that you spend approximately 2 to 3 hours of dedicated, focused work. Do not feel like you need to overengineer the solution with dozens of hours. We're looking for a solution that demonstrates your technical skills, design and how you approach problems.
 
 -   We're relatively flexible on the tech you choose to use - our engineering team is fluent in Ruby, Node/Typescript or Python which we use day to day (pretty sure we got some Rust in there as well). Feel free to tackle this problem in a way that demonstrates your expertise of an area -- or takes you out of your comfort zone. For example, if you build Web APIs by day and want to build a frontend to the problem or a completely different language instead, by all means go for it - learning is a core competency in our group. Let us know this context in your solution's documentation.
 
