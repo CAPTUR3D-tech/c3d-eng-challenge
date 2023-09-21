@@ -15,9 +15,9 @@ Specific item variants cost and their discounts are as follow
 
 | Service type             | Base unit price | Extra options | Discount rule  
 | ------------------------ | --------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Photo retouched               | \$2.5 | - Background removal: + \$0.5<br />- Shadows: + \$0.5 | - 20% off over 30 items ordered (code PHOTO_20_PERCENT_OFF) <br />- Free background removal for any new photos past the 10th (code PHOTO_FREE_BG_OVER_10) |
-| Floor plan               | \$15 | - 3D: + \$15<br /> - Furnitures: + \$10<br /> - Colour: + \$5 | - 25% off over 5 items ordered (code FP_25_PERCENT_OFF) <br />- Free coloured floor plans for any new plans past the 10th (code FP_FREE_COLOUR_OVER_10) |
-| Marketing video creation | \$20 | - 360: + \$25 <br />- Branding: + \$10 <br />- Fly through: + \$10 | - 20% off over 5 items ordered (code VIDEO_20_PERCENT_OFF) <br />- 50% off branded video (with branding selected) for any new videos past the 5<sup>th</sup> (code VIDEO_BRANDING_FIFTY_PERCENT_OFF) |
+| Photo retouched               | \$2.5 | - Background removal: + \$0.5<br />- Shadows: + \$0.5 | - 20% off all items over 30 items ordered (code PHOTO_20_PERCENT_OFF) <br />- Free background removal for any new photos past the 10th (code PHOTO_FREE_BG_OVER_10) |
+| Floor plan               | \$15 | - 3D: + \$15<br /> - Furnitures: + \$10<br /> - Colour: + \$5 | - 25% off all items over 5 items ordered (code FP_25_PERCENT_OFF) <br />- Free coloured floor plans for any new plans past the 10th (code FP_FREE_COLOUR_OVER_10) |
+| Marketing video creation | \$20 | - 360: + \$25 <br />- Branding: + \$10 <br />- Fly through: + \$10 | - 20% off all items over 5 items ordered (code VIDEO_20_PERCENT_OFF) <br />- 50% off branded video (with branding selected) for any new videos past the 5<sup>th</sup> (code VIDEO_BRANDING_FIFTY_PERCENT_OFF) |
 
 **Whole order discount rules** are calculated after the specific item variants rules have been calculated
 
@@ -55,5 +55,8 @@ Your task is to write a an API that takes a JSON file as input, calculates the t
     3.  Handling of special cases
     4.  Automated testing
     5.  Error handling
+
+- If you have any questions, please feel free to reach out to us for clarification
+
 
 Good luck!
