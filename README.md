@@ -5,58 +5,57 @@ Hello! We're pleased to hear you're interested in joining our engineering team!
 Upon review, your submission to this challenge will become the basis of a discussion on design decisions, code, and further extensions.
 
 If any of the instructions are unclear, please feel free to reach out to us for clarification!
+
 ## Challenge
 
-Your team has been tasked with building an API for a service ordering system; For the first iteration, we need a "Shopping cart" endpoint that calculates the cost of services requested based on different requested options.
+At Phoria we offer a number of services to our customers.
 
-The system will have **discount rules** that activates on certain events, both for specific item variant and for the order as a whole. All discount rules are **cumulative**
+Your team has been tasked with building an ordering system which accepts orders for the services below (and other products/services in future). Your code should accept a JSON object with the details of the order (example provided in input.json) and should return a JSON object with computed information about the order (example provided in output.json).
 
-Specific item variants cost and their discounts are as follow
+Offered services and their options are as follows:
 
-| Service type             | Base unit price | Extra options | Discount rule  
-| ------------------------ | --------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Photo retouched               | \$2.5 | - Background removal: + \$0.5<br />- Shadows: + \$0.5 | - 20% off all items over 30 items ordered (code PHOTO_20_PERCENT_OFF) <br />- Free background removal for any new photos past the 10th (code PHOTO_FREE_BG_OVER_10) |
-| Floor plan               | \$15 | - 3D: + \$15<br /> - Furnitures: + \$10<br /> - Colour: + \$5 | - 25% off all items over 5 items ordered (code FP_25_PERCENT_OFF) <br />- Free coloured floor plans for any new plans past the 10th (code FP_FREE_COLOUR_OVER_10) |
-| Marketing video creation | \$20 | - 360: + \$25 <br />- Branding: + \$10 <br />- Fly through: + \$10 | - 20% off all items over 5 items ordered (code VIDEO_20_PERCENT_OFF) <br />- 50% off branded video (with branding selected) for any new videos past the 5<sup>th</sup> (code VIDEO_BRANDING_FIFTY_PERCENT_OFF) |
+| Service          | Base unit price | Extra options                                                               |
+| ---------------- | --------------- | --------------------------------------------------------------------------- |
+| Photo Retouching | \$2.50          | - Background removal: + \$0.50<br />- Add Watermark: + \$0.30               |
+| Floor Plan       | \$15            | - 3D layout: + \$15<br /> - Add furniture: + \$10<br /> - Add Colour: + \$5 |
+| Drone video      | \$50            | - Customer branded: + \$10 <br />- Scenic footage: + \$20                   |
 
-**Whole order discount rules** are calculated after the specific item variants rules have been calculated
-
-| Discount rule            | Discount code                 |
-| ------------------------ | ----------------------------- |
-| \$20 off orders over 200 | ORDER_20_DISCOUNT_OVER_200 |
-| \$40 off orders over 500 | ORDER_40_DISCOUNT_OVER_500 |
-
-The endpoint should return a JSON response that contains
-
--   Order total before discount
--   Order breakdown for each object types, along with their total quantities and discount codes applied
--   Order total after discount, with order discount codes applied
-
-We've added a couple JSON files in this repository representing the cart items needing to be calculated, which you can use to test your system
-
-Your task is to write a an API that takes a JSON file as input, calculates the total cost of the cart items, and returns the JSON response as described above. We expect you use automated tests to validate your solution.
+Your task is to create a small Ruby application (or whatever language best showcases your skills) that can complete the above task and lends itself to being extended. We expect you use automated tests to validate your solution.
 
 ## Guidelines
 
--   This is meant to be an assignment that you spend approximately 2 to 3 hours of dedicated, focused work. Do not feel like you need to overengineer the solution with dozens of hours. We're looking for a solution that demonstrates your technical skills, design and how you approach problems.
+- This is meant to be an assignment that you spend approximately 2 to 3 hours of dedicated, focused work. Do not feel like you need to overengineer the solution with dozens of hours. We're looking for a solution that demonstrates your technical skills, design and how you approach problems.
 
--   We're relatively flexible on the tech you choose to use - our engineering team is fluent in Ruby, Node/Typescript or Python which we use day to day (pretty sure we got some Rust in there as well). Feel free to tackle this problem in a way that demonstrates your expertise of an area -- or takes you out of your comfort zone. For example, if you build Web APIs by day and want to build a frontend to the problem or a completely different language instead, by all means go for it - learning is a core competency in our group. Let us know this context in your solution's documentation.
+- Think of this like an open source project. Create a repo on Github, use git effectively for source control, and use README.md to document what you built for any newcomers to your project.
 
--   Think of this like an open source project. Create a repo on Github, use git for source control, and use README.md to document what you built for the newcomer to your project.
+- Think out loud in your submission's documentation. Document tradeoffs, the rationale behind your technical choices, or things you would do or do differently if you were able to spend more time on the project or do it again.
 
--   Our team builds, alongside our customers and partners, systems engineered to run in production. Given this, please organize, design, test, deploy, and document your solution as if you were going to put into production. We completely understand this might mean you can't do as much in the time budget. Be biased for production-ready over features.
+- As final guidelines, what we're most interested in seeing are
 
--   Think out loud in your submission's documentation. Document tradeoffs, the rationale behind your technical choices, or things you would do or do differently if you were able to spend more time on the project or do it again. Make sure to document how to get started with your solution in terms of setup as well!
+  1.  Code extensibility and "maintainability"
+  2.  Separation of concerns
+  3.  Readability
+  4.  Automated testing
 
--   As final guidelines, what we're most interested in seeing are
+## Pairing with a Captur3d Developer
 
-    1.  Code extensibility and "maintainability"
-    2.  Separation of concerns
-    3.  Handling of special cases
-    4.  Automated testing
-    5.  Error handling
+After completing the take-home section of this challenge, you may be invited to a pairing session with a member of the Captur3d team.
 
-- If you have any questions, please feel free to reach out to us for clarification
+In this session we will look at extending your application with some additional features - namely discounts.
 
+_Note: Please do not complete this section yet_, but do feel free to think about it in advance!
+
+The business overlords have added a new marketing campaign which offers discounts to customers. The discounts will work as follows:
+
+| Discount trigger      | Discount amount |
+| --------------------- | --------------- |
+| Order price over $100 | 10%             |
+| Discount code used    | $10             |
+
+Your task is to update the application to correctly account for any eligible discounts.
+
+## Conclusion
+
+Hopefully the above instructions are clear. If you have any questions, please feel free to reach out to us for clarification.
 
 Good luck!

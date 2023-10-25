@@ -1,0 +1,24 @@
+{
+  "line_items": [
+    {
+      "service": "photo_retouching",
+      "quantity": 1,
+      "total": 123
+    },
+    {
+      "service": "floor_plan",
+      "quantity": 1,
+      "total": 123
+    },
+    {
+      "service": "drone_video",
+      "quantity": 1,
+      "total": 123
+    }
+  ],
+  "line_item_count": 3,
+  "currency": "AUD",
+  "subtotal": 369,
+  "discount": 0,
+  "total": 369
+}
